@@ -13,7 +13,6 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:layout_above="@id/bottom_navbar">
 
         <RelativeLayout
@@ -85,7 +84,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
+                    app:startIconTint="@color/primary"
                     app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+                    android:focusableInTouchMode="false"
                     android:hint="Location">
 
                     <AutoCompleteTextView
@@ -138,8 +139,8 @@
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/montserrat_bold"
                             android:textColor="@color/white"
-                            android:textSize="28dp"
-                            android:text="172"
+                            android:textSize="16dp"
+                            android:text="-"
                             />
 
                         <TextView
@@ -172,8 +173,8 @@
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/montserrat_bold"
                             android:textColor="@color/white"
-                            android:textSize="28dp"
-                            android:text="103"
+                            android:textSize="16dp"
+                            android:text="-"
                             />
 
                         <TextView
@@ -206,8 +207,8 @@
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/montserrat_bold"
                             android:textColor="@color/white"
-                            android:textSize="28dp"
-                            android:text="24"
+                            android:textSize="16dp"
+                            android:text="-"
                             />
 
                         <TextView
@@ -309,7 +310,6 @@
                     android:textColor="@color/text_secondary"
                     android:text="Periksa risiko terpapar covid-19"/>
 
-
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -335,6 +335,5 @@
         app:itemTextColor="@drawable/selector_menu"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_navbar" />
-
 
 </RelativeLayout>
