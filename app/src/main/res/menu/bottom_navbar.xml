@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navbar_home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="@string/navbar_home"/>
+    <item
+        android:id="@+id/navbar_hospital"
+        android:icon="@drawable/ic_outline_map_24"
+        android:title="@string/navbar_hospital"/>
+    <item
+        android:id="@+id/navbar_article"
+        android:icon="@drawable/ic_outline_article_24"
+        android:title="@string/navbar_article"/>
+    <item
+        android:id="@+id/navbar_account"
+        android:icon="@drawable/ic_outline_account_24"
+        android:title="@string/navbar_account"/>
+</menu>

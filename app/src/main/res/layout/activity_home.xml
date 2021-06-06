@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_accent">
+
+    <!-- Body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@id/bottom_navbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Top Header -->
+            <RelativeLayout android:id="@+id/rl_top_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="72dp"
+                android:paddingHorizontal="24dp"
+                android:paddingBottom="24dp"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:id="@+id/tv_home_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:text="Hi, Dahyun"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/tv_home_name"
+                    android:textColor="@color/white_75"
+                    android:textSize="14dp"
+                    android:text="Mari lawan COVID-19 bersama" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="0dp"
+                    app:cardCornerRadius="72dp"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_edit"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/img_ava_dahyun"
+                        android:scaleType="centerCrop"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <!-- Content -->
+            <LinearLayout android:id="@+id/ll_home_content"
+                android:orientation="vertical"
+                android:layout_below="@id/rl_top_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="24dp"
+                android:background="@drawable/bg_corner_card">
+
+                <!-- Filter -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tx_edit_prodi"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+                    android:hint="Location">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ac_edit_prodi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Statistic -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/text_primary"
+                    android:text="Update Kasus Corona"/>
+
+                <TextView
+                    android:id="@+id/tv_home_last_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/text_secondary"
+                    android:text="Terakhir diupdate 21 Juni"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!-- Positif -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:background="@drawable/gradient_orange">
+
+                        <TextView
+                            android:id="@+id/tv_home_stat_positive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/white"
+                            android:textSize="28dp"
+                            android:text="172"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_75"
+                            android:textSize="14dp"
+                            android:text="Positif"
+                            />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <!-- Sembuh -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:background="@drawable/gradient_green">
+
+                        <TextView
+                            android:id="@+id/tv_home_stat_recovered"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/white"
+                            android:textSize="28dp"
+                            android:text="103"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_75"
+                            android:textSize="14dp"
+                            android:text="Sembuh"
+                            />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <!-- Meninggal -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:background="@drawable/gradient_red">
+
+                        <TextView
+                            android:id="@+id/tv_home_stat_death"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/white"
+                            android:textSize="28dp"
+                            android:text="24"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_75"
+                            android:textSize="14dp"
+                            android:text="Meninggal"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Hotline Button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="24dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Buttons -->
+                    <LinearLayout
+                        android:id="@+id/btn_home_hotline"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:elevation="4dp"
+                        android:clipToPadding="false"
+                        android:padding="12dp"
+                        android:background="@drawable/bg_corner_button">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="14dp"
+                            android:src="@drawable/ic_solid_hotline_48"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:text="Hotline COVID-19"
+                            />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/btn_home_consultation"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:clipToPadding="false"
+                        android:elevation="4dp"
+                        android:padding="12dp"
+                        android:background="@drawable/bg_corner_button">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:src="@drawable/ic_solid_hotline_48"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary"
+                            android:text="Konsultasi Dokter"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Periksa -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="@color/text_primary"
+                    android:text="Periksa Gejala"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/text_secondary"
+                    android:text="Periksa risiko terpapar covid-19"/>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/img_periksa"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!-- Navbar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navbar"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/white"
+        android:elevation="8dp"
+        app:itemIconTint="@drawable/selector_menu"
+        app:itemTextColor="@drawable/selector_menu"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navbar" />
+
+
+</RelativeLayout>

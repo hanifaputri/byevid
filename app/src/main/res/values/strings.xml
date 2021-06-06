@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Byevid</string>
+
+    <!-- Menu -->
+    <string name="navbar_home">Beranda</string>
+    <string name="navbar_hospital">Rumah Sakit</string>
+    <string name="navbar_article">Artikel</string>
+    <string name="navbar_account">Akun</string>
+
+
 </resources>
