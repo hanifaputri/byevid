@@ -59,5 +59,4 @@ public class HomeActivity extends AppCompatActivity {
         tx_dead.setText(result.getMeninggal());
     }
 
-    //hai hani
 }

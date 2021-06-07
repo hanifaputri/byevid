@@ -11,6 +11,7 @@
 
     <!-- Body -->
     <ScrollView
+        android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_navbar">
@@ -279,7 +280,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="12dp"
-                            android:src="@drawable/ic_solid_hotline_48"/>
+                            android:src="@drawable/ic_solid_doctor_48"/>
 
                         <TextView
                             android:layout_width="match_parent"
