@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.byevid.model.StatModel;
+import com.example.byevid.model.Statistic;
 import com.example.byevid.network.ApiService;
 
 import java.util.List;
@@ -34,26 +34,26 @@ public class HomeActivity extends AppCompatActivity {
 
     private void getDataFromApi() {
         ApiService.endpoint().getData()
-            .enqueue(new Callback<List<StatModel>>() {
+            .enqueue(new Callback<List<Statistic>>() {
                 @Override
-                public void onResponse(Call<List<StatModel>> call, Response<List<StatModel>> response) {
+                public void onResponse(Call<List<Statistic>> call, Response<List<Statistic>> response) {
                     Log.d(TAG, response.toString());
                     if (response.isSuccessful()) {
-                        List<StatModel> results = response.body();
+                        List<Statistic> results = response.body();
                         showResult(results);
                         Log.d(TAG, results.toString());
                     }
                 }
 
                 @Override
-                public void onFailure(Call<List<StatModel>> call, Throwable t) {
+                public void onFailure(Call<List<Statistic>> call, Throwable t) {
                     Log.d(TAG, t.toString());
                 }
             });
     }
 
-    private void showResult(List<StatModel> statModel) {
-        StatModel result = statModel.get(0);
+    private void showResult(List<Statistic> statModel) {
+        Statistic result = statModel.get(0);
         tx_positive.setText(result.getPositif());
         tx_recovered.setText(result.getSembuh());
         tx_dead.setText(result.getMeninggal());

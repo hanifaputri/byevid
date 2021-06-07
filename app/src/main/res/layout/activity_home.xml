@@ -86,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="24dp"
                     app:startIconTint="@color/primary"
-                    app:startIconDrawable="@drawable/ic_baseline_location_on_24"
+                    app:startIconDrawable="@drawable/ic_baseline_location_24"
                     android:focusableInTouchMode="false"
                     android:hint="Location">
 

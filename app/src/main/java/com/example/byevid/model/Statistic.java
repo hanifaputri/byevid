@@ -1,6 +1,6 @@
 package com.example.byevid.model;
 
-public class StatModel {
+public class Statistic {
     private String name;
     private String positif;
     private String sembuh;
