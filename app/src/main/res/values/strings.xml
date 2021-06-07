@@ -6,6 +6,7 @@
     <string name="navbar_hospital">Rumah Sakit</string>
     <string name="navbar_article">Artikel</string>
     <string name="navbar_account">Akun</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>
