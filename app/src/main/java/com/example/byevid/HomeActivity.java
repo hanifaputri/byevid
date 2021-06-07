@@ -58,4 +58,6 @@ public class HomeActivity extends AppCompatActivity {
         tx_recovered.setText(result.getSembuh());
         tx_dead.setText(result.getMeninggal());
     }
+
+    //hai hani
 }
