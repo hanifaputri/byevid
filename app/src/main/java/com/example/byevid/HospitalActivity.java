@@ -49,5 +49,16 @@ public class HospitalActivity extends AppCompatActivity {
 
         hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
         hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
+
     }
 }
