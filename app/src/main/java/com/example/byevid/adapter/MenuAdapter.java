@@ -1,9 +1,7 @@
 package com.example.byevid.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -13,12 +11,14 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.byevid.R;
+import com.example.byevid.model.Settings;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class MenuAdapter extends ArrayAdapter<Menu> {
+public class MenuAdapter extends ArrayAdapter<Settings> {
     private final Context context;
-    List<Menu> listMenu;
+    List<Settings> listSetting;
     int layout;
 
     private static class MenuHolder {
@@ -26,20 +26,18 @@ public class MenuAdapter extends ArrayAdapter<Menu> {
         ImageView icon;
     }
 
-    public MenuAdapter(Context context, int layout, List<Menu> listMenu) {
-        super(context, layout, listMenu);
+    public MenuAdapter(Context context, int layout, ArrayList<Settings> listSetting) {
+        super(context, layout, listSetting);
 
         this.context = context;
         this.layout = layout;
-        this.listMenu = listMenu;
+        this.listSetting = listSetting;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if an existing view is being reused, otherwise inflate the view
         MenuHolder holder;
-
-        final View result;
 
         if(convertView == null){
             holder = new MenuHolder();
@@ -50,25 +48,18 @@ public class MenuAdapter extends ArrayAdapter<Menu> {
             holder.icon = (ImageView) convertView.findViewById(R.id.img_list_account_icon);
             holder.title = (TextView) convertView.findViewById(R.id.tv_list_account_menu);
 
-            result = convertView;
             convertView.setTag(holder);
         }
         else {
             holder = (MenuHolder) convertView.getTag();
-            result = convertView;
         }
 
-        // Get data item from position
-//        Menu menu = getItem(position);
-//        holder.title.setText();
-//
-//        Glide.with(context)
-//                .load(menu.getItem(position).getIcon())
-//                .fitCenter()
-//                .dontAnimate()
-//                .dontTransform()
-//                .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                .into(holder.icon);
+//      Get data item from position
+        Settings menu = getItem(position);
+        holder.title.setText(menu.getTitle());
+        Glide.with(context)
+                .load(menu.getIcon())
+                .into(holder.icon);
 
         return convertView;
     }

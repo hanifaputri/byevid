@@ -2,16 +2,16 @@ package com.example.byevid.model;
 
 import android.graphics.drawable.Drawable;
 
-public class Menu {
+public class Settings {
     private String title;
     private Drawable icon;
     private Class<?> to;
 
-    public Menu() {
+    public Settings() {
 
     }
 
-    public Menu(String title, Drawable icon, Class<?> to) {
+    public Settings(String title, Drawable icon, Class<?> to) {
         this.title = title;
         this.icon = icon;
         this.to = to;

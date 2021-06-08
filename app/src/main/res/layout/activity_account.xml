@@ -79,7 +79,8 @@
                 android:layout_below="@id/rl_top_header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="24dp"
+                android:divider="@color/gray"
+                android:dividerHeight="0.5dp"
                 android:background="@drawable/bg_corner_card">
 
             </ListView>
