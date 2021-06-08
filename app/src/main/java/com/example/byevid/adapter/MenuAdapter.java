@@ -59,16 +59,16 @@ public class MenuAdapter extends ArrayAdapter<Menu> {
         }
 
         // Get data item from position
-        Menu menu = getItem(position);
-        holder.title.setText();
-
-        Glide.with(context)
-                .load(menu.getItem(position).getIcon())
-                .fitCenter()
-                .dontAnimate()
-                .dontTransform()
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .into(holder.icon);
+//        Menu menu = getItem(position);
+//        holder.title.setText();
+//
+//        Glide.with(context)
+//                .load(menu.getItem(position).getIcon())
+//                .fitCenter()
+//                .dontAnimate()
+//                .dontTransform()
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .into(holder.icon);
 
         return convertView;
     }
