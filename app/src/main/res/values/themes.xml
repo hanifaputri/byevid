@@ -17,6 +17,7 @@
         <item name="android:fontFamily">@font/montserrat</item>
         <!-- Divider color -->
         <item name="android:listDivider">@color/gray</item>
-
+        <!-- Ripple -->
+        <item name="rippleColor">@color/gray</item>
     </style>
 </resources>

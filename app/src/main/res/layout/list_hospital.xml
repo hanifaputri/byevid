@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/montserrat_bold"
-            android:textSize="14dp"
+            android:textSize="14sp"
             android:textColor="@color/text_primary"
             android:text="Rumah Sakit Hermina" />
 
@@ -59,7 +59,7 @@
                 android:id="@+id/tv_list_hospital_distance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:textColor="@color/text_secondary"
                 android:text="2.3 km" />
 

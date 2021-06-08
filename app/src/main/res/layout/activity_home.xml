@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:textColor="@color/white"
-                    android:textSize="24dp"
+                    android:textSize="24sp"
                     android:text="Hi, Dahyun"
                     />
 
@@ -46,7 +46,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_below="@id/tv_home_name"
                     android:textColor="@color/white_75"
-                    android:textSize="14dp"
+                    android:textSize="14sp"
                     android:text="Mari lawan COVID-19 bersama" />
 
                 <androidx.cardview.widget.CardView
@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="@color/text_primary"
                     android:text="Update Kasus Corona"/>
@@ -113,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="@color/text_secondary"
                     android:text="Terakhir diupdate 21 Juni"/>
 
@@ -140,7 +140,7 @@
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/montserrat_bold"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:text="-"
                             />
 
@@ -148,7 +148,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white_75"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:text="Positif"
                             />
 
@@ -174,7 +174,7 @@
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/montserrat_bold"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:text="-"
                             />
 
@@ -182,7 +182,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white_75"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:text="Sembuh"
                             />
 
@@ -208,7 +208,7 @@
                             android:layout_marginBottom="4dp"
                             android:fontFamily="@font/montserrat_bold"
                             android:textColor="@color/white"
-                            android:textSize="16dp"
+                            android:textSize="16sp"
                             android:text="-"
                             />
 
@@ -216,7 +216,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white_75"
-                            android:textSize="14dp"
+                            android:textSize="14sp"
                             android:text="Meninggal"
                             />
 
@@ -298,7 +298,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:layout_marginBottom="4dp"
                     android:textColor="@color/text_primary"
                     android:text="Periksa Gejala"/>
@@ -307,7 +307,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
                     android:textColor="@color/text_secondary"
                     android:text="Periksa risiko terpapar covid-19"/>
 

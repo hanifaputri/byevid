@@ -24,7 +24,6 @@
             <RelativeLayout android:id="@+id/rl_top_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:paddingTop="72dp"
                 android:paddingHorizontal="24dp"
                 android:paddingBottom="24dp"
@@ -34,11 +33,12 @@
                 <TextView
                     android:id="@+id/tv_account_name"
                     android:layout_toRightOf="@id/rl_acccount_top"
+                    android:layout_marginTop="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:textColor="@color/white"
-                    android:textSize="18dp"
+                    android:textSize="18sp"
                     android:text="Kim Dahyun"
                     />
 
@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/white_75"
-                    android:textSize="14dp"
+                    android:textSize="14sp"
                     android:text="+62-877-8199-3256" />
 
                 <androidx.cardview.widget.CardView
@@ -81,6 +81,7 @@
                 android:layout_height="match_parent"
                 android:divider="@color/gray"
                 android:dividerHeight="0.5dp"
+
                 android:background="@drawable/bg_corner_card">
 
             </ListView>
