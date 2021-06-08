@@ -1,17 +1,13 @@
 package com.example.byevid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import com.example.byevid.adapter.ArticleAdapter;
 import com.example.byevid.model.Article;
-import com.example.byevid.model.Hospital;
 import com.example.byevid.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -51,6 +47,5 @@ public class ArticleActivity extends AppCompatActivity {
         articleList.add(new Article("Penerapan Social Distancing", "7", "https://firebasestorage.googleapis.com/v0/b/byevid-1cb2e.appspot.com/o/social-distancing.jpeg?alt=media&token=475933d2-aebd-427d-b0f3-77468ea625db","http://google.com/"));
         articleList.add(new Article("Tips WFH Selama Masa Pandemi", "7", "https://firebasestorage.googleapis.com/v0/b/byevid-1cb2e.appspot.com/o/work-from-home.jpeg?alt=media&token=9a135864-3b0d-4181-8ae8-1e394e81a784","http://google.com/"));
         articleList.add(new Article("Jenis Masker Anti COVID-19 yang Efektif", "7", "https://firebasestorage.googleapis.com/v0/b/byevid-1cb2e.appspot.com/o/kids-medical-mask.jpeg?alt=media&token=ec14c6ea-92f1-4362-99e0-97ab2ac37916","http://google.com/"));
-
     }
 }
