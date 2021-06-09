@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ForgotPass"
+    android:background="@drawable/bg_accent">
+
+    <!-- Body -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top Header -->
+
+        <RelativeLayout
+            android:id="@+id/rl_top_logo_forgotpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="40dp">
+
+            <ImageView
+                android:id="@+id/btn_edit_back"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/ic_btn_back_48" />
+
+        </RelativeLayout>
+
+        <!-- Content -->
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/rl_top_logo_forgotpass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:background="@drawable/bg_corner_card"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_illustration_forgot_pass" />
+
+            <TextView
+                android:id="@+id/tx_q_forgotpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:text="Lupa Password?"/>
+
+            <TextView
+                android:id="@+id/tx_input_email_below"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:text="Masukkan email di bawah ini untuk mendapatkan instruksi selanjutnya."/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tx_input_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:startIconDrawable="@drawable/ic_outline_mail_24"
+                android:hint="Email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:backgroundTint="@color/accent"
+                android:text="Kirim" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

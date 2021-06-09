@@ -22,9 +22,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Byevid"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AccountAboutActivity">
-        </activity>
-
+        <activity android:name=".ForgotPass"></activity>
+        <activity android:name=".RegisterName" />
+        <activity android:name=".Register" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".AccountAboutActivity" />
         <activity android:name=".AccountEditActivity" />
         <activity android:name=".AccountActivity">
             <intent-filter>

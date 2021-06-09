@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn"
+    android:background="@drawable/bg_accent">
+
+    <!-- Body -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Top Header -->
+
+        <RelativeLayout
+            android:id="@+id/rl_top_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="95dp"
+            android:paddingBottom="40dp">
+
+            <ImageView
+                android:id="@+id/img_logo_header"
+                android:layout_width="160dp"
+                android:layout_height="55dp"
+                android:background="@drawable/img_logo"
+                android:scaleType="centerCrop" />
+
+        </RelativeLayout>
+
+        <!-- Content -->
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/rl_top_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:background="@drawable/bg_corner_card"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tx_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="24sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/black"
+                android:text="Masuk"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tx_edit_email_login"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    app:startIconDrawable="@drawable/ic_outline_mail_24"
+                    android:hint="Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tx_edit_password_login"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                    app:endIconMode="password_toggle"
+                    android:hint="Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tx_forgot_password_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/primary"
+                android:text="Lupa Password?"/>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:backgroundTint="@color/accent"
+                android:text="Masuk" />
+
+            <TextView
+                android:id="@+id/tx_regist_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textSize="13sp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Belum punya akun? Daftar"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_divider_or"/>
+
+            <Button
+                android:id="@+id/outlinedButton_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="Masuk dengan Google"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/gray"
+                app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
