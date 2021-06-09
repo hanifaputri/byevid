@@ -52,7 +52,7 @@
                 android:layout_below="@id/rl_top_header"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="16dp"
+                android:padding="24dp"
                 android:background="@drawable/bg_corner_card"
                 android:gravity="center_horizontal">
 
@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     app:startIconDrawable="@drawable/ic_outline_person_24"
-                    android:hint="Naama">
+                    android:hint="Nama">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -122,11 +122,11 @@
                     android:id="@+id/btn_edit_save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
                     android:insetTop="0dp"
                     android:insetBottom="0dp"
                     android:backgroundTint="@color/accent"
-                    android:text="Simpan"
-                    />
+                    android:text="Simpan" />
 
             </LinearLayout>
 

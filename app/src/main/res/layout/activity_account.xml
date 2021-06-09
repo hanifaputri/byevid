@@ -42,7 +42,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/tv_account_phone"
+                    android:id="@+id/tv_account_email"
                     android:layout_below="@id/tv_account_name"
                     android:layout_toRightOf="@id/rl_acccount_top"
                     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:layout_marginTop="8dp"
                     android:textColor="@color/white_75"
                     android:textSize="14sp"
-                    android:text="+62-877-8199-3256" />
+                    android:text="rahimahanifa@gmail.com" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/rl_acccount_top"

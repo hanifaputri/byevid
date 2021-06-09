@@ -8,5 +8,10 @@
     <string name="navbar_account">Akun</string>
     <string name="title_activity_maps">Map</string>
 
-
+    <!-- App -->
+    <string name="app_about">
+        Byevid adalah aplikasi yang menyajikan informasi mengenai COVID-19 dan dikembangkan dalam rangka memenuhi tugas akhir mata kuliah Pengembangan Aplikasi Mobile.Byevid adalah aplikasi yang menyajikan informasi mengenai COVID-19 dan dikembangkan dalam rangka memenuhi tugas akhir mata kuliah Pengembangan Aplikasi Mobile.
+        \n\nByevid dirancang oleh Alizza Iman Raddin, Ghina Zahirah, dan Hanifa Putri Rahima dari kelas Pengembangan Aplikasi Mobile B program studi Teknologi Informasi angkatan 2019.
+        \n\nSaat ini, Byevid masih dalam proses pengembangan. Maka dari itu, jika ada kritik dan saran yang ingin disampaikan kepada tim pengembang dapat menghubungi melalui email kami thetopokkipedas@gmail.com
+    </string>
 </resources>
