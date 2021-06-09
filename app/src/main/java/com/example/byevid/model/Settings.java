@@ -7,10 +7,6 @@ public class Settings {
     private Drawable icon;
     private Class<?> to;
 
-    public Settings() {
-
-    }
-
     public Settings(String title, Drawable icon, Class<?> to) {
         this.title = title;
         this.icon = icon;
