@@ -3,6 +3,7 @@ package com.example.byevid;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.byevid.model.Statistic;
 import com.example.byevid.network.ApiService;
+import com.example.byevid.utils.CustomProgressDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -23,6 +25,8 @@ import retrofit2.Response;
 public class HomeActivity extends AppCompatActivity {
     private final String TAG = "HomeActivity";
     private TextView tx_positive, tx_recovered, tx_dead;
+    private CustomProgressDialog dialog_loading;
+//    private ProgressDialog dialog_loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +63,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        // Dialog Loading
+//        dialog_loading = new ProgressDialog(HomeActivity.this);
+//        dialog_loading.setContentView(R.layout.dialog_loading);
+//        dialog_loading.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+//        dialog_loading.show();
+
+        dialog_loading = new CustomProgressDialog(this, R.layout.dialog_loading);
+        dialog_loading.show();
+
         tx_positive = findViewById(R.id.tv_home_stat_positive);
         tx_recovered = findViewById(R.id.tv_home_stat_recovered);
         tx_dead = findViewById(R.id.tv_home_stat_death);
 
+        // Fetch data from API
         getDataFromApi();
     }
 
@@ -77,6 +91,9 @@ public class HomeActivity extends AppCompatActivity {
                         List<Statistic> results = response.body();
                         showResult(results);
                         Log.d(TAG, results.toString());
+
+                        // Hide loading dialog
+                        dialog_loading.dismiss();
                     }
                 }
 
