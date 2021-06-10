@@ -1,13 +1,18 @@
 package com.example.byevid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.byevid.model.Statistic;
 import com.example.byevid.network.ApiService;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
 
@@ -23,6 +28,36 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        // Navigation bar
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navbar);
+        bottomNav.setSelectedItemId(R.id.navbar_home);
+
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navbar_home:
+                        break;
+                    case R.id.navbar_hospital:
+                        startActivity(new Intent(getApplicationContext(), HospitalActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_article:
+                        startActivity(new Intent(getApplicationContext(), ArticleActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_account:
+                        startActivity(new Intent(getApplicationContext(), AccountActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                }
+                return true;
+            }
+        });
 
         tx_positive = findViewById(R.id.tv_home_stat_positive);
         tx_recovered = findViewById(R.id.tv_home_stat_recovered);

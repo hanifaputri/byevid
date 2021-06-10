@@ -1,14 +1,18 @@
 package com.example.byevid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.byevid.adapter.ArticleAdapter;
 import com.example.byevid.model.Article;
 import com.example.byevid.utils.SpacesItemDecoration;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -21,6 +25,37 @@ public class ArticleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_article);
+
+        // Navigation bar
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navbar);
+        bottomNav.setSelectedItemId(R.id.navbar_article);
+
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navbar_home:
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_hospital:
+                        startActivity(new Intent(getApplicationContext(), HospitalActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_article:
+                        break;
+                    case R.id.navbar_account:
+                        startActivity(new Intent(getApplicationContext(), AccountActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        overridePendingTransition(0,0);
+                        break;
+                }
+                return true;
+            }
+        });
 
         // Initialize data
         articleList = new ArrayList<>();

@@ -1,5 +1,6 @@
 package com.example.byevid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -9,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.byevid.adapter.MenuAdapter;
 import com.example.byevid.model.Settings;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -31,6 +34,36 @@ public class AccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+
+        // Navigation bar
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navbar);
+        bottomNav.setSelectedItemId(R.id.navbar_account);
+
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navbar_home:
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_hospital:
+                        startActivity(new Intent(getApplicationContext(), HospitalActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_article:
+                        startActivity(new Intent(getApplicationContext(), ArticleActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_account:
+                        break;
+                }
+                return true;
+            }
+        });
 
         listView = (ListView) findViewById(R.id.lv_account_list);
 

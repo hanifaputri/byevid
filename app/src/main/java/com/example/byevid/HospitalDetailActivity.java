@@ -48,7 +48,7 @@ public class HospitalDetailActivity extends AppCompatActivity implements OnMapRe
 
         tx_name = (TextView) findViewById(R.id.tv_hospital_detail_name);
         tx_address = (TextView) findViewById(R.id.tv_hospital_detail_address);
-        tx_distance = (TextView) findViewById(R.id.tv_hospital_detail_distance);
+//        tx_distance = (TextView) findViewById(R.id.tv_hospital_detail_distance);
         img_thumb = (ImageView) findViewById(R.id.img_hospital_detail_thumb);
 
         // Runtime permission
@@ -127,7 +127,7 @@ public class HospitalDetailActivity extends AppCompatActivity implements OnMapRe
 
             tx_name.setText(data.getName());
             tx_address.setText(data.getAddress());
-            tx_distance.setText(Float.toString(getDistance()) + " km");
+//            tx_distance.setText(Float.toString(getDistance()) + " km");
             Glide.with(this)
                     .load(data.getImgUrl())
                     .fitCenter()

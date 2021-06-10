@@ -1,16 +1,20 @@
 package com.example.byevid;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.byevid.adapter.HospitalAdapter;
 import com.example.byevid.model.Hospital;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -24,6 +28,37 @@ public class HospitalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hospital);
+
+        // Navigation bar
+        BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navbar);
+        bottomNav.setSelectedItemId(R.id.navbar_hospital);
+
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navbar_home:
+                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_hospital:
+                        break;
+                    case R.id.navbar_article:
+                        startActivity(new Intent(getApplicationContext(), ArticleActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                    case R.id.navbar_account:
+                        startActivity(new Intent(getApplicationContext(), AccountActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        break;
+                }
+                return true;
+            }
+        });
+
 
         // Initialize data
         hospitalList = new ArrayList<>();
