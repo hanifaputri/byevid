@@ -1,6 +1,8 @@
 package com.example.byevid.model;
 
-public class Hospital {
+import java.io.Serializable;
+
+public class Hospital implements Serializable {
     private String name;
     private String phone;
     private double _lat;
