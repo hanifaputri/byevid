@@ -3,15 +3,15 @@ package com.example.byevid.model;
 public class Hospital {
     private String name;
     private String phone;
-    private double _lang;
+    private double _lat;
     private double _long;
     private String address;
     private String imgUrl;
 
-    public Hospital(String name, String phone, double _lang, double _long, String address, String imgUrl) {
+    public Hospital(String name, String phone, double _lat, double _long, String address, String imgUrl) {
         this.name = name;
         this.phone = phone;
-        this._lang = _lang;
+        this._lat = _lat;
         this._long = _long;
         this.address = address;
         this.imgUrl = imgUrl;
@@ -50,11 +50,11 @@ public class Hospital {
     }
 
     public double get_lang() {
-        return _lang;
+        return _lat;
     }
 
-    public void set_lang(double _lang) {
-        this._lang = _lang;
+    public void set_lang(double _lat) {
+        this._lat = _lat;
     }
 
     public double get_long() {

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.textfield.TextInputLayout;
@@ -36,7 +37,7 @@ public class AccountEditActivity extends AppCompatActivity {
             }
         });
 
-        // Button for add  image
+        // Button for add image
         btn_edit_img = (Button) findViewById(R.id.btn_account_edit_img);
         btn_edit_img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +48,7 @@ public class AccountEditActivity extends AppCompatActivity {
                 startActivityForResult(gallery, 1);
             }
         });
-        
+
         // Button for reset image
         btn_clear_img = (Button) findViewById(R.id.btn_account_clear_img);
         btn_clear_img.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +57,17 @@ public class AccountEditActivity extends AppCompatActivity {
                 resetImg();
             }
         });
+
+        // Button for save data
+        btn_save = (Button) findViewById(R.id.btn_edit_save);
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AccountEditActivity.this, "Save", Toast.LENGTH_SHORT).show();
+                // Intent and result code here
+            }
+        });
+
     }
 
     @Override

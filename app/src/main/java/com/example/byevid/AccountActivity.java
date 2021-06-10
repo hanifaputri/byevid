@@ -1,14 +1,17 @@
 package com.example.byevid;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,12 +25,22 @@ public class AccountActivity extends AppCompatActivity {
     private ArrayList<Settings> listSetting;
     private MenuAdapter adapter;
 
+    private Button btn_logout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
         listView = (ListView) findViewById(R.id.lv_account_list);
+
+        btn_logout = (Button) findViewById(R.id.btn_account_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logOut();
+            }
+        });
 
         // Initialize menu
         listSetting = new ArrayList<>();
@@ -41,8 +54,7 @@ public class AccountActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Settings data = listSetting.get(position);
                 if (data.getTo() != null) {
-                    Intent newActivity = new Intent(getApplicationContext(), data.getTo());
-                    startActivity(newActivity);
+                    showActivity(data.getTo());
                 } else  {
                     Toast.makeText(AccountActivity.this, "Tes: " + data.getTitle() , Toast.LENGTH_SHORT).show();
                 }
@@ -65,5 +77,28 @@ public class AccountActivity extends AppCompatActivity {
     public void showActivity(Class<?> to) {
         Intent intent = new Intent(this, to);
         startActivity(intent);
+    }
+
+    private void logOut(){
+        // Show confirmation dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Keluar?");
+        builder.setMessage("Apakah kamu yakin ingin keluar?");
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+//                mAuth.signOut();
+                startActivity(new Intent(AccountActivity.this, SignInActivity.class));
+                finish();
+            }
+        });
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        builder.create().show();
     }
 }

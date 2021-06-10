@@ -39,7 +39,6 @@ public class HospitalActivity extends AppCompatActivity {
 
         // Divider
 //        recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), DividerItemDecoration.VERTICAL));
-
         DividerItemDecoration itemDecoration = new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL);
         itemDecoration.setDrawable(new ColorDrawable(R.color.gray));
         recyclerView.addItemDecoration(itemDecoration);
@@ -47,17 +46,10 @@ public class HospitalActivity extends AppCompatActivity {
 
     private void addData() {
         hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-        hospitalList.add(new Hospital("Hermina Galaxy", "0218205377", 109209389, 1203904059, "Jalan Perkutut", "https://d1ojs48v3n42tp.cloudfront.net/provider_location_banner/752970_3-4-2020_12-48-40.jpeg"));
-
+        hospitalList.add(new Hospital("Rumah Sakit Universitas Indonesia (RSUI)", "50829292", -6.371845188303128 , 106.82994694136114, "Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424", "https://lh5.googleusercontent.com/p/AF1QipMY571DEmB8do2oJrBolITm40Bi2cFUAC-6yRtX=w408-h408-k-no"));
+//        hospitalList.add(new Hospital("", "021", 1 , 1, "", ""));
+//        hospitalList.add(new Hospital("", "021", 1 , 1, "", ""));
+//        hospitalList.add(new Hospital("", "021", 1 , 1, "", ""));
+//        hospitalList.add(new Hospital("", "021", 1 , 1, "", ""));
     }
 }

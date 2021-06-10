@@ -3,11 +3,10 @@ package com.example.byevid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.os.Bundle;
-
-import com.hololo.tutorial.library.PermissionStep;
-import com.hololo.tutorial.library.Step;
+//
+//import com.hololo.tutorial.library.PermissionStep;
+//import com.hololo.tutorial.library.Step;
 
 public class SplashScreen2 extends AppCompatActivity {
 
