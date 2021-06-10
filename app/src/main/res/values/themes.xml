@@ -1,6 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Byevid" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Component Theming -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="textAppearanceButton">@style/TextAppearance.App.Button</item>
+
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>
+
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary</item>
@@ -19,5 +26,6 @@
         <item name="android:listDivider">@color/gray</item>
         <!-- Ripple -->
         <item name="rippleColor">@color/gray</item>
+
     </style>
 </resources>
