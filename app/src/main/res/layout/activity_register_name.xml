@@ -24,7 +24,7 @@
             android:paddingBottom="40dp">
 
             <ImageView
-                android:id="@+id/btn_edit_back"
+                android:id="@+id/btn_register_name_back"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_width="48dp"
@@ -51,27 +51,24 @@
                 android:background="@drawable/img_illustration_regist_name" />
 
             <TextView
-                android:id="@+id/tx_q_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textSize="24sp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/black"
+                android:textColor="@color/text_primary"
                 android:text="Siapa nama kamu?"/>
 
             <TextView
-                android:id="@+id/tx_my_name_is"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp"
                 android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
                 android:text="Nama saya adalah ..."/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tx_input_name"
+                android:id="@+id/tx_register_name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -86,7 +83,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_done"
+                android:id="@+id/btn_register_name_done"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"

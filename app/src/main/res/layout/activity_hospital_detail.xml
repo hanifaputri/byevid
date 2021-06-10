@@ -121,8 +121,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
                 app:icon="@drawable/ic_baseline_directions_24"
                 android:text="Petunjuk"
                 />
@@ -134,8 +132,6 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
                 android:layout_weight="1"
                 app:icon="@drawable/ic_baseline_call_24"
                 android:text="Hubungi"

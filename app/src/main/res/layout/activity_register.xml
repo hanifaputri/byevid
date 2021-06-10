@@ -33,7 +33,7 @@
                 android:layout_centerHorizontal="true"/>
 
             <ImageView
-                android:id="@+id/btn_edit_back"
+                android:id="@+id/btn_register_back"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_width="48dp"
@@ -61,11 +61,11 @@
                 android:layout_marginTop="20dp"
                 android:textSize="24sp"
                 android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/black"
+                android:textColor="@color/text_primary"
                 android:text="Daftar"/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tx_edit_email_register"
+                android:id="@+id/tx_register_email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tx_edit_password_register"
+                android:id="@+id/tx_register_password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -99,32 +99,48 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <CheckBox
+                android:id="@+id/cb_register_toc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="13sp"
-                android:fontFamily="@font/montserrat"
                 android:checked="false"
-                android:text="Saya menyetujui syarat dan ketentuan yang berlaku"/>
+                android:padding="8dp"
+                android:text="Saya menyetujui syarat dan ketentuan yang berlaku"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
                 android:backgroundTint="@color/accent"
                 android:text="Masuk" />
 
-            <TextView
-                android:id="@+id/tx_login_account"
-                android:layout_width="wrap_content"
+            <!-- Have Account -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:textSize="13sp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Sudah punya akun? Masuk"/>
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Sudah punya akun?"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_reg_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:text="Masuk" />
+            </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -133,17 +149,16 @@
                 android:background="@drawable/ic_divider_or"/>
 
             <Button
-                android:id="@+id/outlinedButton_regist"
+                android:id="@+id/btn_register_google"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
                 android:text="Daftar dengan Google"
                 android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/gray"
-                app:startIconDrawable="@drawable/ic_baseline_lock_24"
-                style="?attr/materialButtonOutlinedStyle"/>
+                android:textColor="@color/text_secondary"
+                app:icon="@drawable/ic_color_google"
+                app:iconTint="@null"/>
 
         </LinearLayout>
 
