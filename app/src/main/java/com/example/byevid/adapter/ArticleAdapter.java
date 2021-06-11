@@ -1,19 +1,20 @@
 package com.example.byevid.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.byevid.ArticleDetailActivity;
 import com.example.byevid.R;
 import com.example.byevid.model.Article;
 
@@ -70,7 +71,10 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleV
         holder.ll_article.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Klik", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Klik", Toast.LENGTH_SHORT).show();
+                Intent detail = new Intent(context, ArticleDetailActivity.class);
+                detail.putExtra("Data", data);
+                context.startActivity(detail);
             }
         });
     }

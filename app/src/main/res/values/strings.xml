@@ -14,4 +14,22 @@
         \n\nByevid dirancang oleh Alizza Iman Raddin, Ghina Zahirah, dan Hanifa Putri Rahima dari kelas Pengembangan Aplikasi Mobile B program studi Teknologi Informasi angkatan 2019.
         \n\nSaat ini, Byevid masih dalam proses pengembangan. Maka dari itu, jika ada kritik dan saran yang ingin disampaikan kepada tim pengembang dapat menghubungi melalui email kami thetopokkipedas@gmail.com
     </string>
+
+    <!-- Article -->
+    <string name="article_detail">
+        <![CDATA[
+Work from home atau yang biasa disebut WFH adalah suatu aktivitas melakukan pekerjaan di rumah yang kerap dijalani di masa pandemi COVID-19. Kegiatan ini adalah salah satu upaya pencegahan penularan virus COVID-19 dengan diberikan pembatasan mobilitas yang sebelumnya harus pulang pergi ke kantor dan bertemu dengan banyak orang. Namun, masa pandemi yang tidak berujung kerap kali menimbulkan rasa bosan dan stress jika terlalu lama bekerja di dalam rumah. Kondisi<i>burnt out </i>dikarenakan banyaknya pekerjaan dan harus di depan layar laptop selama berjam-jam sangatlah nyata, bahkan bisa mempengaruhi kondisi mental seseorang. Oleh karena itu, diperlukan tips yang efektif untuk menanggulangi atau mencegah hal-hal buruk terjadi. Berikut adalah tips WFH ala Topokki Pedas!
+<br/><br/>
+<b>Atur Waktu Jeda</b><br/><br/>
+Saat melakukan banyak pekerjaan dalam satu waktu sekaligus, siapkan 5-10 menit untuk beristirahat sejenak. Anda dapat melakukan hal-hal kesukaan anda seperti bermain bersama hewan peliharaan, menonton video artis kesukaan anda, mendengarkan lagu, dan banyak aktivitas seru lainnya.
+<br/><br/>
+<b>Siapkan Makanan atau Snack Favorite</b><br/><br/>
+Untuk menjaga tenaga dan juga <i>mood </i>saat bekerja, pastikan kebutuhan pangan Anda terpenuhi. Anda bisa memesan makanan atau bahkan mencoba untuk membuatnya sendiri disela-sela waktu luang. Namun, Anda juga perlu memperhatikan gizi makanan yang Anda konsumsi, karena makanan atau minuman sehat yang mengandung banyak vitamin dan mineral tentunya akan membuat Anda lebih bersemangat menjalani WFH.
+<br/><br/>
+<b>Posisikan Meja Kerja Senyaman Mungkin</b><br/><br/>
+Hal ini dapat dibilang sebagai salah satu tips yang sangat penting, atur posisi meja kerja Anda senyaman mungkin. Jangan biarkan meja kerja Anda penuh dengan beberapa barang yang tidak penting sehingga mengganggu konsentrasi Anda dalam bekerja. Posisi meja dan kursi juga sangat penting agar tubuh Anda tidak mengalami kelelahan yang berlebihan jika memilih posisi yang salah
+<br/><br/>
+Demikian 3 tips utama dari Topokki Pedas yang bisa Anda terapkan di rumah selama menjalani WFH supaya lebih efektif dan menyenangkan. Tetap semangat dan jaga jarak agak pandemi ini dapat berakhir dengan cepat!
+]]>
+    </string>
 </resources>

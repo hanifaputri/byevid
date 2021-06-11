@@ -1,6 +1,8 @@
 package com.example.byevid.model;
 
-public class Article {
+import java.io.Serializable;
+
+public class Article implements Serializable {
     private String title;
     private String duration;
     private String imgUrl;
