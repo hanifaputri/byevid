@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,8 +29,9 @@ import retrofit2.Response;
 public class HomeActivity extends AppCompatActivity {
     private final String TAG = "HomeActivity";
     private TextView tx_positive, tx_recovered, tx_dead;
+    private LinearLayout btn_dial, btn_consult;
+    private ImageView btn_check;
     private CustomProgressDialog dialog_loading;
-//    private ProgressDialog dialog_loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +41,6 @@ public class HomeActivity extends AppCompatActivity {
         // Navigation bar
         BottomNavigationView bottomNav = (BottomNavigationView) findViewById(R.id.bottom_navbar);
         bottomNav.setSelectedItemId(R.id.navbar_home);
-
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -63,18 +67,41 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // Dialog Loading
-//        dialog_loading = new ProgressDialog(HomeActivity.this);
-//        dialog_loading.setContentView(R.layout.dialog_loading);
-//        dialog_loading.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-//        dialog_loading.show();
-
+        // Show dialog
         dialog_loading = new CustomProgressDialog(this, R.layout.dialog_loading);
         dialog_loading.show();
 
         tx_positive = findViewById(R.id.tv_home_stat_positive);
         tx_recovered = findViewById(R.id.tv_home_stat_recovered);
         tx_dead = findViewById(R.id.tv_home_stat_death);
+
+        btn_consult = findViewById(R.id.btn_home_consult);
+        btn_consult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(HomeActivity.this, "Konsultasi", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        btn_dial = findViewById(R.id.btn_home_hotline);
+        btn_dial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent call = new Intent(Intent.ACTION_DIAL);
+                call.setData(Uri.parse("tel:119"));
+                startActivity(call);
+            }
+        });
+
+        btn_check = findViewById(R.id.btn_home_check);
+        btn_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.halodoc.com/tanya-jawab-seputar-virus-corona/"));
+                startActivity(browserIntent);
+            }
+        });
 
         // Fetch data from API
         getDataFromApi();
