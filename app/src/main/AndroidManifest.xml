@@ -8,11 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
 
     <application
         android:allowBackup="true"
@@ -22,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Byevid"
         android:usesCleartextTraffic="true">
+        <activity android:name=".SplashScreen4"></activity>
+        <activity android:name=".SplashScreen3"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,36 +34,26 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".ForgotPassActivity">
-
-        </activity>
-        <activity android:name=".RegisterName">
-
-        </activity>
+        <activity android:name=".ForgotPassActivity"></activity>
+        <activity android:name=".RegisterName"></activity>
         <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".SignInActivity">
+        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".AccountAboutActivity" />
+        <activity android:name=".AccountEditActivity" />
+        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".ArticleActivity"></activity>
+        <activity android:name=".ArticleDetailActivity" />
+        <activity android:name=".HospitalDetailActivity" />
+        <activity android:name=".HospitalActivity"></activity>
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".SplashScreen1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AccountAboutActivity" />
-        <activity android:name=".AccountEditActivity"></activity>
-        <activity android:name=".AccountActivity">
-        </activity>
-        <activity android:name=".ArticleActivity">
-        </activity>
-        <activity android:name=".HospitalDetailActivity" />
-        <activity android:name=".HospitalActivity">
-        </activity>
-        <activity android:name=".HomeActivity">
-
-        </activity>
-        <activity android:name=".SplashScreen1">
-
-        </activity>
-        <activity android:name=".SplashScreen2"></activity>
+        <activity android:name=".SplashScreen2" />
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@ package com.example.byevid;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,6 +18,9 @@ import com.example.byevid.model.Statistic;
 import com.example.byevid.network.ApiService;
 import com.example.byevid.utils.CustomProgressDialog;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 
 import java.util.List;
 
@@ -27,11 +29,15 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity {
-    private final String TAG = "HomeActivity";
-    private TextView tx_positive, tx_recovered, tx_dead;
+    private final String TAG = "Home Activity";
+
+    private TextView tv_positive, tv_recovered, tv_dead, tv_name;
     private LinearLayout btn_dial, btn_consult;
     private ImageView btn_check;
     private CustomProgressDialog dialog_loading;
+
+    // Firebase instance
+    private FirebaseUser fUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,13 +73,32 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        // Get firebase instance
+        fUser = FirebaseAuth.getInstance().getCurrentUser();
+        // Set name
+        tv_name = (TextView) findViewById(R.id.tv_home_name);
+        if (fUser != null) {
+            for (UserInfo profile : fUser.getProviderData()) {
+                // Name, email address, and profile photo Url
+                String name = profile.getDisplayName();
+                // If name not empty
+                if (!name.isEmpty()) {
+                    String arr[] = name.split(" ", 2);
+                    String firstName = arr[0];
+                    tv_name.setText("Hi, " + firstName.trim() + "!");
+                } else {
+                    tv_name.setText("Hi, User!");
+                }
+            }
+        }
+
         // Show dialog
         dialog_loading = new CustomProgressDialog(this, R.layout.dialog_loading);
         dialog_loading.show();
 
-        tx_positive = findViewById(R.id.tv_home_stat_positive);
-        tx_recovered = findViewById(R.id.tv_home_stat_recovered);
-        tx_dead = findViewById(R.id.tv_home_stat_death);
+        tv_positive = findViewById(R.id.tv_home_stat_positive);
+        tv_recovered = findViewById(R.id.tv_home_stat_recovered);
+        tv_dead = findViewById(R.id.tv_home_stat_death);
 
         btn_consult = findViewById(R.id.btn_home_consult);
         btn_consult.setOnClickListener(new View.OnClickListener() {
@@ -107,7 +132,6 @@ public class HomeActivity extends AppCompatActivity {
         getDataFromApi();
     }
 
-
     private void getDataFromApi() {
         ApiService.endpoint().getData()
             .enqueue(new Callback<List<Statistic>>() {
@@ -133,9 +157,9 @@ public class HomeActivity extends AppCompatActivity {
 
     private void showResult(List<Statistic> statModel) {
         Statistic result = statModel.get(0);
-        tx_positive.setText(result.getPositif());
-        tx_recovered.setText(result.getSembuh());
-        tx_dead.setText(result.getMeninggal());
+        tv_positive.setText(result.getPositif());
+        tv_recovered.setText(result.getSembuh());
+        tv_dead.setText(result.getMeninggal());
     }
 
 }

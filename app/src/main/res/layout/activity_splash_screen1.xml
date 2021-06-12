@@ -1,57 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen1"
-    android:background="@drawable/bg_big_accent">
+    android:background="@drawable/bg_big_accent"
+    tools:context=".SplashScreen1">
 
     <!-- Body -->
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <!-- Top Header -->
+    <!-- Top Header -->
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingHorizontal="24dp"
-            android:paddingTop="100dp"
-            android:paddingBottom="40dp">
 
-            <ImageView
-                android:id="@+id/id_logo"
-                android:layout_width="246dp"
-                android:layout_height="82dp"
-                android:background="@drawable/img_logo"
-                android:layout_marginTop="250dp"
-                android:padding="24dp"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/id_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/img_logo"
+        android:padding="24dp"
+        android:scaleType="centerCrop"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
 
-            <Space
-                android:id="@+id/sp_ss"
-                android:layout_below="@id/id_logo"
-                android:layout_width="match_parent"
-                android:layout_height="330dp"
-                android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="42dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Copyright Topokki Pedas 2021"
+        android:textAlignment="center"
+        android:textColor="@color/white_75"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/sp_ss"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/montserrat"
-                android:textAlignment="center"
-                android:text="Copywright Topokki Pedas 2021"/>
 
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

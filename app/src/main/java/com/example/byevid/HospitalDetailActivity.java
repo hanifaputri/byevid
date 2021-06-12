@@ -79,11 +79,6 @@ public class HospitalDetailActivity extends AppCompatActivity implements OnMapRe
         btn_direction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(HospitalDetailActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(HospitalDetailActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//                    Intent direction = new Intent(android.content.Intent.ACTION_VIEW,
-//                            Uri.parse("http://maps.google.com/maps/search/?api=1&query=" + Double.toString(data.get_lang()) + "&" + Double.toString(data.get_long())));
-//                    startActivity(direction);
-                }
             }
         });
 
@@ -140,20 +135,20 @@ public class HospitalDetailActivity extends AppCompatActivity implements OnMapRe
         }
     }
 
-    private float getDistance() {
-        float[] results = new float[1];
-        LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            double longitude = location.getLongitude();
-            double latitude = location.getLatitude();
-
-            Location.distanceBetween(latitude, longitude,
-                    data.get_lang(), data.get_long(), results);
-        }
-
-        return results[0];
-    }
+//    private float getDistance() {
+//        float[] results = new float[1];
+//        LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+//            double longitude = location.getLongitude();
+//            double latitude = location.getLatitude();
+//
+//            Location.distanceBetween(latitude, longitude,
+//                    data.get_lang(), data.get_long(), results);
+//        }
+//
+//        return results[0];
+//    }
 
 }

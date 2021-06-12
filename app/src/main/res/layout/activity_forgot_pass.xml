@@ -66,8 +66,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textSize="14sp"
+                android:lineSpacingMultiplier="0"
+                android:lineSpacingExtra="24sp"
                 android:fontFamily="@font/montserrat"
-                android:textColor="@color/black"
+                android:textColor="@color/text_secondary"
                 android:text="Masukkan email di bawah ini untuk mendapatkan instruksi selanjutnya."/>
 
             <com.google.android.material.textfield.TextInputLayout

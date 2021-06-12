@@ -1,6 +1,7 @@
 package com.example.byevid;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -10,25 +11,37 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.byevid.adapter.MenuAdapter;
 import com.example.byevid.model.Settings;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 
 import java.util.ArrayList;
 
 public class AccountActivity extends AppCompatActivity {
+    private static final String TAG = "Account Activity";
+
     private ListView listView;
     private ArrayList<Settings> listSetting;
     private MenuAdapter adapter;
 
     private Button btn_logout;
+    private TextView tv_name, tv_email;
+
+    // Firebase instance
+    private FirebaseUser fUser;
+    private FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +78,34 @@ public class AccountActivity extends AppCompatActivity {
             }
         });
 
+        // Get firebase instance
+        fAuth = FirebaseAuth.getInstance();
+        fUser = fAuth.getCurrentUser();
+
+        // Set name & emaial
+        tv_name = (TextView) findViewById(R.id.tv_account_name);
+        tv_email = (TextView) findViewById(R.id.tv_account_email);
+
+        if (fUser != null) {
+            for (UserInfo profile : fUser.getProviderData()) {
+                // Name, email address, and profile photo Url
+                String name = profile.getDisplayName();
+                String email = profile.getEmail();
+                // If name not empty
+                if (!name.isEmpty()) {
+                    tv_name.setText(profile.getDisplayName());
+                } else {
+                    tv_name.setText("Hi, User!");
+                }
+
+                if (!email.isEmpty()) {
+                    tv_email.setText(profile.getEmail());
+                } else {
+                    tv_email.setText("Email belum diset");
+                }
+            }
+        }
+
         listView = (ListView) findViewById(R.id.lv_account_list);
 
         btn_logout = (Button) findViewById(R.id.btn_account_logout);
@@ -87,12 +128,29 @@ public class AccountActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Settings data = listSetting.get(position);
                 if (data.getTo() != null) {
-                    showActivity(data.getTo());
-                } else  {
+                    if (data.getTitle().equals("Ubah Profil")) {
+                        showActivityForResult(data.getTo(), 99);
+                    } else {
+                        showActivity(data.getTo());
+                    }
+                } else {
                     Toast.makeText(AccountActivity.this, "Tes: " + data.getTitle() , Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 99 && resultCode == RESULT_OK) {
+            recreate();
+            Log.d(TAG, "Request code 99");
+            Toast.makeText(this, "Profil berhasil diupdate", Toast.LENGTH_LONG).show();
+        } else {
+            Log.d(TAG, "Request code not retrieved");
+        }
     }
 
     private void addData() {
@@ -121,8 +179,8 @@ public class AccountActivity extends AppCompatActivity {
         builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-//                mAuth.signOut();
-                startActivity(new Intent(AccountActivity.this, SignInActivity.class));
+                fAuth.signOut();
+//                startActivity(new Intent(AccountActivity.this, SignInActivity.class));
                 finish();
             }
         });

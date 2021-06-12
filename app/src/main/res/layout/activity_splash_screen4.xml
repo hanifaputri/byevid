@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashScreen2"
+    tools:context=".SplashScreen4"
     android:fitsSystemWindows="true"
     android:background="@drawable/bg_medium_accent">
 
@@ -24,12 +24,12 @@
 
             <ImageView
                 android:id="@+id/img_ss"
-                android:layout_width="336dp"
-                android:layout_height="330dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:scaleType="centerCrop"
-                android:background="@drawable/img_splashscreen_1"/>
+                android:src="@drawable/img_splashscreen_3"/>
 
         </RelativeLayout>
 
@@ -51,7 +51,7 @@
                 android:textAlignment="center"
                 android:paddingVertical="36dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Statistik COVID-19"
+                android:text="Artikel dan Berita"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
 
@@ -63,7 +63,7 @@
                 android:lineSpacingExtra="24sp"
                 android:lineSpacingMultiplier="0"
                 android:padding="24dp"
-                android:text="Pantau terus perkembangan pandemi COVID-19 di areamu."
+                android:text="Lawan hoax! Kami akan menyajikan artikel dan berita terbaru yang akurat selama masa pandemi COVID-19."
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -79,7 +79,7 @@
                 android:layout_marginBottom="36dp">
 
                 <Button
-                    android:id="@+id/btn_next_onboarding2"
+                    android:id="@+id/btn_next_onboarding4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -88,24 +88,12 @@
                     android:insetBottom="0dp"
                     android:text="Lanjut" />
 
-                <Button
-                    android:id="@+id/btn_skip_onboarding2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:backgroundTint="@android:color/transparent"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:text="Lewati"
-                    android:textColor="@color/accent"
-                    app:strokeColor="@color/accent"
-                    app:strokeWidth="1dp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_scroll_1" />
+                    android:src="@drawable/ic_scroll_3" />
 
             </RelativeLayout>
 

@@ -65,7 +65,7 @@
                         android:id="@+id/img_account_ava"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/img_ava_dahyun"
+                        android:background="@drawable/img_ava_placeholder"
                         android:scaleType="centerCrop"
                         />
                 </androidx.cardview.widget.CardView>
