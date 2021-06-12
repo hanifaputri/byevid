@@ -37,8 +37,16 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".ForgotPassActivity"></activity>
-        <activity android:name=".RegisterName" />
+        <activity android:name=".ForgotPassActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterName">
+
+        </activity>
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".SignInActivity" />
         <activity android:name=".AccountAboutActivity" />
@@ -51,11 +59,10 @@
         <activity android:name=".HospitalActivity">
         </activity>
         <activity android:name=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity android:name=".SplashScreen1">
+
         </activity>
     </application>
 

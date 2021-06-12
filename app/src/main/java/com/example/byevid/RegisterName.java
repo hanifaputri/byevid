@@ -20,11 +20,10 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterName extends AppCompatActivity {
 
-    private static final String TAG = "Register Nama";
+   // private static final String TAG = "Register Nama";
     private TextInputLayout tx_insert_name;
     private Button btn_done;
     private ImageView btn_back;
-    private FirebaseAuth fAuth;
     private FirebaseUser fUser;
 
     @Override
@@ -57,7 +56,7 @@ public class RegisterName extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-                            Log.d(TAG, "Nama berhasil ditambahkan.");
+                            //Log.d(TAG, "Nama berhasil ditambahkan.");
                         }
                     }
                 });
