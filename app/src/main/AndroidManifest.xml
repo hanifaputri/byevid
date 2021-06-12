@@ -38,17 +38,19 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".ForgotPassActivity">
+
+        </activity>
+        <activity android:name=".RegisterName">
+
+        </activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterName">
-
-        </activity>
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".SignInActivity" />
         <activity android:name=".AccountAboutActivity" />
         <activity android:name=".AccountEditActivity"></activity>
         <activity android:name=".AccountActivity">
@@ -64,6 +66,7 @@
         <activity android:name=".SplashScreen1">
 
         </activity>
+        <activity android:name=".SplashScreen2"></activity>
     </application>
 
 </manifest>
