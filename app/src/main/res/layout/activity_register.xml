@@ -9,159 +9,166 @@
 
     <!-- Body -->
 
-    <RelativeLayout
+    <ScrollView
+        android:fillViewport="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Top Header -->
-
         <RelativeLayout
-            android:id="@+id/rl_top_logo_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="24dp"
-            android:paddingTop="48dp"
-            android:paddingBottom="40dp">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/img_logo_header"
-                android:layout_width="160dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="47dp"
-                android:background="@drawable/img_logo"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"/>
+            <!-- Top Header -->
 
-            <ImageView
-                android:id="@+id/btn_register_back"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginRight="24dp"
-                android:src="@drawable/ic_btn_back_48" />
-
-        </RelativeLayout>
-
-        <!-- Content -->
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_below="@id/rl_top_logo_login"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="24dp"
-            android:background="@drawable/bg_corner_card"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:id="@+id/tx_register"
+            <RelativeLayout
+                android:id="@+id/rl_top_logo_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:textSize="24sp"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/text_primary"
-                android:text="Daftar"/>
+                android:paddingHorizontal="24dp"
+                android:paddingTop="48dp"
+                android:paddingBottom="40dp">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tx_register_email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="16dp"
-                app:startIconDrawable="@drawable/ic_outline_mail_24"
-                android:hint="Email">
+                <ImageView
+                    android:id="@+id/img_logo_header"
+                    android:layout_width="160dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="47dp"
+                    android:background="@drawable/img_logo"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:id="@+id/btn_register_back"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="24dp"
+                    android:src="@drawable/ic_btn_back_48" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tx_register_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:startIconDrawable="@drawable/ic_baseline_lock_24"
-                app:endIconMode="password_toggle"
-                android:hint="Password">
+            </RelativeLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:maxLines="1"/>
-            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Content -->
 
-            <CheckBox
-                android:id="@+id/cb_register_toc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:checked="false"
-                android:padding="8dp"
-                android:text="Saya menyetujui syarat dan ketentuan yang berlaku"
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btn_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="@color/accent"
-                android:text="Masuk" />
-
-            <!-- Have Account -->
             <LinearLayout
+                android:orientation="vertical"
+                android:layout_below="@id/rl_top_logo_login"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="24dp">
+                android:layout_height="match_parent"
+                android:padding="24dp"
+                android:background="@drawable/bg_corner_card"
+                android:gravity="center_horizontal">
 
                 <TextView
+                    android:id="@+id/tx_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/text_primary"
+                    android:text="Daftar"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tx_register_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="16dp"
+                    app:startIconDrawable="@drawable/ic_outline_mail_24"
+                    android:hint="Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tx_register_password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24"
+                    app:endIconMode="password_toggle"
+                    android:hint="Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLines="1"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_register_toc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:text="Sudah punya akun?"
+                    android:layout_marginBottom="16dp"
+                    android:checked="false"
+                    android:padding="8dp"
+                    android:text="Saya menyetujui syarat dan ketentuan yang berlaku"
                     android:textColor="@color/text_secondary"
                     android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/tv_reg_login"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textColor="@color/primary"
-                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/accent"
                     android:text="Masuk" />
+
+                <!-- Have Account -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Sudah punya akun?"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_reg_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp"
+                        android:text="Masuk" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/ic_divider_or"/>
+
+                <Button
+                    android:id="@+id/btn_register_google"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="Daftar dengan Google"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/text_secondary"
+                    app:icon="@drawable/ic_color_google"
+                    app:iconTint="@null"/>
+
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="@drawable/ic_divider_or"/>
+        </RelativeLayout>
 
-            <Button
-                android:id="@+id/btn_register_google"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Daftar dengan Google"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/text_secondary"
-                app:icon="@drawable/ic_color_google"
-                app:iconTint="@null"/>
-
-        </LinearLayout>
-
-    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "511838167474",
+    "project_id": "byevid-1cb2e",
+    "storage_bucket": "byevid-1cb2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511838167474:android:7a5cf083a543de7ac184ab",
+        "android_client_info": {
+          "package_name": "com.example.byevid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511838167474-mjf2ua9lfjh9ke1rcjurdbtmh2hd5cq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.byevid",
+            "certificate_hash": "bf3e05765d49c3c638f87dae408d73080d898473"
+          }
+        },
+        {
+          "client_id": "511838167474-s2uamabrcph2k92lr0a8iud1q7is9csb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.byevid",
+            "certificate_hash": "d1144dadd2d9677b1c058f5b6a176e48f5c80021"
+          }
+        },
+        {
+          "client_id": "511838167474-v96ststbaguire1p6qn2qnfcand2smvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFZ-Dt3pOHMpWMpgb5s41P5UvP644uv0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511838167474-v96ststbaguire1p6qn2qnfcand2smvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

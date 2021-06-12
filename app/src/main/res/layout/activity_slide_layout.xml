@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_medium_accent">
+
+    <!-- Ccontent -->
+
+    <RelativeLayout
+        android:id="@+id/rl_top_header_slide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp">
+
+        <ImageView
+            android:id="@+id/img_ss"
+            android:layout_width="336dp"
+            android:layout_height="330dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ss"
+        android:orientation="vertical"
+        android:layout_below="@id/rl_top_header_slide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tx_slide_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"/>
+
+        <TextView
+            android:id="@+id/tx_slide_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:padding="24dp"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

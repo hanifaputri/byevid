@@ -2,28 +2,25 @@
 package com.example.byevid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
+import android.Manifest;
 import android.os.Bundle;
-//
-//import com.hololo.tutorial.library.PermissionStep;
-//import com.hololo.tutorial.library.Step;
+import android.widget.LinearLayout;
+
+import com.google.android.material.slider.Slider;
 
 public class SplashScreen2 extends AppCompatActivity {
+
+    private ViewPager vp_slide;
+    private LinearLayout ll_mdot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen2);
 
-        /*
-        addFragment(
-                new Step.Builder()
-                        .setTitle(getString(R.string.automatic_data))
-                        .setContent(getString(R.string.gm_finds_photos))
-                        .setDrawable(R.drawable.img_splashscreen_1)
-                        .setSummary(getString(R.string.continue_and_learn))
-                        .build());
-        */
+        vp_slide = findViewById(R.id.vp_slidevp);
     }
 
 }

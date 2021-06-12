@@ -10,20 +10,97 @@
     android:fitsSystemWindows="true"
     android:background="@drawable/bg_medium_accent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ll_home_content"
-        android:layout_width="wrap_content"
-        android:layout_height="380dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="355dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-4dp"
-        android:background="@drawable/bg_corner_card"
-        android:orientation="vertical"
-        android:padding="24dp" />
+    <!-- Body -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_top_header_ss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="48dp">
+
+                <ImageView
+                    android:id="@+id/img_ss"
+                    android:layout_width="336dp"
+                    android:layout_height="330dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ss"
+                android:orientation="vertical"
+                android:layout_below="@id/rl_top_header_ss"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_corner_card"
+                android:gravity="center_horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btn_next_onboarding"
+                        android:layout_width="100dp"
+                        android:layout_height="48dp"
+                        android:backgroundTint="@color/accent"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginBottom="54dp"
+                        android:text="Lanjut"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"/>
+
+                    <Button
+                        android:id="@+id/btn_skip_onboarding"
+                        android:layout_width="100dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginBottom="54dp"
+                        android:backgroundTint="@android:color/transparent"
+                        app:strokeColor="@color/accent"
+                        app:strokeWidth="1dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="Lewati"
+                        android:textColor="@color/accent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vp_slidevp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_onboarding_indicator"
+                        android:layout_width="104dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginEnd="20dp"
+                        android:orientation="horizontal"
+                        android:padding="24dp"
+                        app:layout_constraintBottom_toBottomOf="@id/btn_next_onboarding"
+                        app:layout_constraintEnd_toStartOf="@id/btn_next_onboarding"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/btn_next_onboarding" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
 </RelativeLayout>
