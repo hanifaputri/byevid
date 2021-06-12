@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen3"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_medium_accent">
+
+    <!-- Body -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_top_header_ss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="48dp">
+
+            <ImageView
+                android:id="@+id/img_ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_splashscreen_2"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_ss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_top_header_ss"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_corner_card"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tx_slide_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:paddingVertical="36dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Rumah Sakit Rujukan COVID-19"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tx_slide_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:fontFamily="@font/montserrat"
+                android:lineSpacingExtra="24sp"
+                android:lineSpacingMultiplier="0"
+                android:padding="24dp"
+                android:text="Kami akan membantu Anda menemukan rumah sakit rujukan COVID-19 di sekitar Anda."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="36dp">
+
+                <Button
+                    android:id="@+id/btn_next_onboarding3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="@color/accent"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Lanjut" />
+
+                <Button
+                    android:id="@+id/btn_skip_onboarding3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Lewati"
+                    android:textColor="@color/accent"
+                    app:strokeColor="@color/accent"
+                    app:strokeWidth="1dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_scroll_2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
