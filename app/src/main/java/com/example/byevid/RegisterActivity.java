@@ -9,21 +9,15 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import org.w3c.dom.Text;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -64,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
                 // firebase authentication
                 fAuth = FirebaseAuth.getInstance();
                 if (fAuth.getCurrentUser() != null) {
-                    startActivity(new Intent(getApplicationContext(), RegisterNameActivity.class));
+                    startActivity(new Intent(getApplicationContext(), RegisterName.class));
                     finish();
                 }
 
@@ -100,7 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            startActivity(new Intent(getApplicationContext(), RegisterNameActivity.class));
+                            startActivity(new Intent(getApplicationContext(), RegisterName.class));
                         } else {
                             Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
